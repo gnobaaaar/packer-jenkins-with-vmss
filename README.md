@@ -42,7 +42,7 @@ Example Output<br/>
 }
 ```
 
-<br/
+<br/>
 
 4. Define the Packer Template<br/>
 Refer to the packer-test.json file.<br/>
