@@ -3,7 +3,7 @@
 
 Creating a Linux Azure VM Image Using Packer
 
-	1.	Install Packer
+1. Install Packer
 https://developer.hashicorp.com/packer/tutorials/docker-get-started/get-started-install-cli
 
 ```
@@ -12,13 +12,15 @@ echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://
 sudo apt update && sudo apt install packer
 ```
 
-	2.	Create an Azure Resource Group
+
+2. Create an Azure Resource Group
 Create a resource group to build, create, and store the source image.
 ```
 az group create -n myResourceGroup -l koreacentral
 ```
 
-	3.	Create Azure Credentials
+
+3. Create Azure Credentials
 Create credentials with Contributor role within the subscription.
 ```
 az ad sp create-for-rbac --role Contributor --scopes /subscriptions/<subscription_id> --query "{ client_id: appId, client_secret: password, tenant_id: tenant }"
@@ -32,11 +34,13 @@ Example Output
 }
 ```
 
-	4.	Define the Packer Template
+
+4. Define the Packer Template
 Refer to the packer-test.json file.
 
 
-	5.	Build the Image
+
+5. Build the Image
 ```
 sudo ./packer build ubuntu.json
 ```
