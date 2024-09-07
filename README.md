@@ -1,6 +1,8 @@
 # packer-jenkins-with-vmss
-
+# packer를 사용한 vmss 이미지 업데이트
+## :open_file_folder: 프로젝트 소개
 Packer를 사용한 Linux Azure VM 생성
+해당 VM으로 VMSS 인프라 이미지 업데이트
 <br/>
 1. Packer 설치<br/>
 https://developer.hashicorp.com/packer/tutorials/docker-get-started/get-started-install-cli
@@ -52,12 +54,12 @@ Refer to the packer-test.json file.<br/>
 ```
 sudo ./packer build ubuntu.json
 ```
-
-6. vmss 이미지 업데이트
+<br/>
+6. vmss 이미지 업데이트<br/>
 ```
 az vmss update     --resource-group eastar-vmss-RG     --name packer-vmss-test     --set virtualMachineProfile.storageProfile.imageReference.id="/subscriptions/da720363-5254-4a36-9929-99af33c94274/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/zeroPackerImage2"
 ```
-
+<br/><br/>
 
 
 
