@@ -52,3 +52,13 @@ Refer to the packer-test.json file.<br/>
 ```
 sudo ./packer build ubuntu.json
 ```
+
+6. vmss 이미지 업데이트
+```
+az vmss update     --resource-group eastar-vmss-RG     --name packer-vmss-test     --set virtualMachineProfile.storageProfile.imageReference.id="/subscriptions/da720363-5254-4a36-9929-99af33c94274/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/zeroPackerImage2"
+```
+
+
+
+
+
